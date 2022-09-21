@@ -10,12 +10,10 @@ def Task1():
 def Task2():
     year = int(input())
     if year % 4 == 0:
-        if year % 100 == 0 and year % 400 == 0:
-            print('366')
-        elif year % 100 != 0:
-            print('366')
-        else:
+        if year % 100 == 0 and year % 400 != 0:
             print('365')
+        else:
+            print('366')
     else:
         print('365')
 
@@ -47,6 +45,7 @@ def Task6():
     s = hight*width/2
     if s % 2 == 0:
         s /= 2
+        print(s)
     else:
         print("Не можу ділити на 2")
 
@@ -72,9 +71,8 @@ def Task9():
     b = int(input())
 
     amount = 0
-    for i in range(b-a+1):
-        amount += a
-        a += 1
+    for i in range(a, b+1):
+        amount += i
     print(amount)
 
 def Task10():
@@ -82,9 +80,8 @@ def Task10():
     b = int(input())
 
     amount = 0
-    for i in range(b-a+1):
+    for i in range(a,b):
         amount += math.pow(a,2)
-        a += 1
     print(amount)
 
 def Task11():
@@ -94,9 +91,8 @@ def Task11():
         print('число не має бути >= 200')
     else:
         sum = 200 - a + 1
-        for i in range(sum):
-            amount += a
-            a += 1
+        for i in range(a, 200 + 1):
+            amount += i
         rez = amount/sum
         print(rez)
 
@@ -105,11 +101,9 @@ def Task12():
     b = int(input())
 
     amount = 0
-    i = 0
-    while i <= b-a+2:
+    while a <= b:
         amount += a
         a += 1
-        i += 1
     print(amount)
 
 def Task13():
@@ -118,9 +112,8 @@ def Task13():
     if(0 > a or a > 50):
         print('число не має буми в межах a < 0 or a > 50')
     else:
-        for i in range(50-a+1):
-            amount += math.pow(a,2)
-            a += 1
+        for i in range(a,50+1):
+            amount += math.pow(i,2)
     print(amount)
 
 def Task14():
@@ -137,7 +130,7 @@ def Task15():
     n = int(input())
     kn = math.sqrt(n)
     rez = kn - kn%1
-    print(rez)
+    print((rez+1)**2)
 
 def Task16():
     n = int(input())
@@ -146,21 +139,21 @@ def Task16():
         number += 1
     print(math.pow(number,2)+1)
 
-Task1()
-Task2()
-Task3()
-Task4()
-Task5()
-Task6()
-Task7()
-Task8()
-Task9()
-Task10()
-Task11()
-Task12()
-Task13()
-Task14()
-Task15()
+# Task1()
+# Task2()
+# Task3()
+# Task4()
+# Task5()
+# Task6()
+# Task7()
+# Task8()
+# Task9()
+# Task10()
+# Task11()
+# Task12()
+# Task13()
+# Task14()
+# Task15()
 Task16()
 
 
