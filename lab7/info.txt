@@ -1,0 +1,6 @@
+MyName
+MySurname
+MySurname MyName
+MyNickName
+2004-2-5
+18
