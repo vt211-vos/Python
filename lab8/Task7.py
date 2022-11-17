@@ -50,7 +50,6 @@ class IntoArabic:
     def __str__(self):
         return str(self.__numb)
 
-rez = IntoRoman(29)
-print(rez)
-rez = IntoArabic(rez)
+
+rez = IntoArabic("VIII")
 print(rez)
