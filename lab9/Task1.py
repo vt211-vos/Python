@@ -16,7 +16,6 @@ class Alphabet:
             for j in str:
                 if i == j:
                     return "Це українська мова"
-                    break
         return "Це не українська мова"
 class  EngAlphabet(Alphabet):
     def __init__(self, lang = "En", letters = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]):
