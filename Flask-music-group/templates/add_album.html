@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    Вхід
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">Новий альбом</h1>
+
+    <form action="{{url_for('AddAlbum')}}" method="post" class="row g-3 mt-3">
+        <div class="contatiner">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="col-12">
+                        <label for="inputEmail4" class="form-label">Назва:</label>
+                        <input type="text" name="name" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputPassword4" class="form-label">Рік:</label>
+                        <input type="number" name="year" class="form-control" id="inputPassword4">
+                    </div>
+                <div class="col-12">
+                        <label for="inputPassword4" class="form-label">Основна інформація:</label>
+                        <input type="text" name="info" class="form-control" id="inputPassword4">
+                    </div>
+                <div class="col-12">
+                        <label for="inputPassword4" class="form-label">Додаткова інфомація:</label>
+                        <input type="text" name="info2" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-primary">Опублікувати</button>
+                    </div>
+                    {% if message %}
+                        <h6 style="color: red">{{ message }}</h6>
+                    {% endif %}
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+    </form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    Реєстрація
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">Реєстрація</h1>
+
+    <form method="post" class="row g-3 mt-3">
+        <div class="contatiner">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="col-12">
+                        <label for="inputEmail4" class="form-label">Електронна пошта</label>
+                        <input type="email" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputPassword4" class="form-label">Пароль</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputPassword4" class="form-label">Пароль ще раз</label>
+                        <input type="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-primary">Зареєструватися</button>
+                    </div>
+                    {% if message %}
+                        <h6 style="color: red">{{ message }}</h6>
+                    {% endif %}
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+    </form>
+
+
+{% endblock %}

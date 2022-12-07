@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    Вхід
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">Вхід</h1>
+
+    <form method="post" class="row g-3 mt-3">
+        <div class="contatiner">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="col-12">
+                        <label for="inputEmail4" class="form-label">Електронна пошта</label>
+                        <input name="name" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputPassword4" class="form-label">Пароль</label>
+                        <input type="password" name="password" class="form-control" id="inputPassword4">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button type="submit" class="btn btn-primary">Увійти</button>
+                    </div>
+                    {% if message %}
+                        <h6 style="color: red">{{ message }}</h6>
+                    {% endif %}
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+    </form>
+{% endblock %}

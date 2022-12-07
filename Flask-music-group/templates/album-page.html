@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ post[1] }}
+{% endblock %}
+
+{% block body %}
+    <div class="contatiner">
+        <div class="row mt-5">
+            <div class="col-1"></div>
+            <img class="col-5" src="{{ url_for('static',filename = 'img/slider-1.jpg') }}" alt=""/>
+            <div class="col-4">
+                <h1>Альбом {{ post[1] }}</h1>
+                <hr>
+                <span>
+                    <b>Рік: </b>{{ post[2] }}
+                </span>
+                <p>{{ post[3] }}</p>
+                <hr>
+                <p>{{ post[4] }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

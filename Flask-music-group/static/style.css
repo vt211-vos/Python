@@ -1,0 +1,70 @@
+body {
+    background: url("https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2012/07/background-pattern-15.jpg");
+}
+
+.main-container {
+    background-color: #eaeaea;
+    min-height: calc(100vh - 150px);
+}
+
+.footer {
+    background-color: #fff;
+    height: 150px;
+}
+
+.flex-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.albums-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.album-card {
+    margin-bottom: 30px;
+    width: 24rem;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.photo-container img {
+    width: 300px;
+    margin: 5px;
+}
+
+.carousel__slide {
+    height: 420px;
+    overflow: hidden;
+}
+
+.minus-margin {
+    padding-bottom: 30px;
+    margin-bottom: -20px;
+}
+
+.container {
+    padding: 0 70px;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 400px);
+}
+
+
+.admin-page-album-img{
+    height: 100px;
+    width: 100px;
+}

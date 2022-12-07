@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    Фотографії
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">Фотографії</h1>
+    <div class="photo-container">
+        {% for element in photos %}
+            <a data-fancybox="gallery" href="{{ url_for('static',filename = 'img/' + element) }}">
+                <img src="{{ url_for('static',filename = 'img/' + element) }}" alt="">
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

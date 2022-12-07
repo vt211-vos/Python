@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    альбом
+{% endblock %}
+
+{% block body %}
+
+    {{ super() }}
+    {% for p in post %}
+        {% for v in p %}
+
+    <span>{{ v }}</span>
+    {% endfor %}
+    <div>{{ p }}</div>
+    {% endfor %}
+
+
+{% endblock %}
